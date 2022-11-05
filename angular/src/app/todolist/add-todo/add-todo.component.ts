@@ -9,12 +9,16 @@ import { TodoService } from 'src/app/todo.service';
 })
 export class AddTodoComponent implements OnInit {
 
+  createtodo: Todo = new Todo();
+
   constructor(private usertodo: TodoService) { }
 
   ngOnInit(): void {
   }
 
+  
   addtodo(obj: Todo){
     this.usertodo.addUser(obj)
+    this.createtodo = new Todo();
   }
 }

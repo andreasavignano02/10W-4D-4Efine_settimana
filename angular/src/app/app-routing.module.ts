@@ -4,8 +4,12 @@ import { TodolistComponent } from './todolist/todolist.component';
 
 const routes: Routes = [
   {
-    path: 'Todolist',
+    path: 'todolist',
     component: TodolistComponent
+  }, {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'todolist'
   }
 ];
 
